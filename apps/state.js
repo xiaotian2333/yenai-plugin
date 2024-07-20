@@ -18,10 +18,6 @@ export class NewState extends plugin {
         {
           reg: "^#椰奶监控$",
           fnc: "monitor"
-        },
-        {
-          reg: "^#?原图$",
-          fnc: "origImg"
         }
       ]
 
@@ -67,22 +63,5 @@ export class NewState extends plugin {
       interval = false
     }
     interval = false
-  }
-
-  async origImg(e) {
-    const message_id = e.reply_id || (e.source
-      ? (e.group?.getChatHistory
-          ? (await e.group.getChatHistory(e.source.seq, 1))[0].message_id
-          : (await e.friend.getChatHistory(e.source.time, 1))[0].message_id
-        )
-      : false)
-    if (!message_id) return false
-    const data = await redis.get(this.redisOrigImgKey + message_id)
-    if (!data) return false
-    let url = data
-      .replace("data:image/jpeg;base64,", "base64://")
-      .replace("../../../../../", "")
-    e.reply(segment.image(url))
-    return true
   }
 }

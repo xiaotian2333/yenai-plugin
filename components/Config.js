@@ -30,21 +30,6 @@ class Config {
     }
   }
 
-  /**
-   * 群配置
-   * @param groupId
-   */
-  getGroup(groupId = "") {
-    let config = this.getConfig("whole")
-    let group = this.getConfig("group")
-    let defCfg = this.getdefSet("whole")
-
-    if (group[groupId]) {
-      return { ...defCfg, ...config, ...group[groupId] }
-    }
-    return { ...defCfg, ...config }
-  }
-
   /** 主人QQ */
   get masterQQ() {
     return cfg.masterQQ
@@ -59,51 +44,11 @@ class Config {
     return this.getDefOrConfig("whole")
   }
 
-  /** 进群验证配置 */
-  get groupverify() {
-    return this.getDefOrConfig("groupverify")
-  }
-
-  /** 加群通知 */
-  get groupAdd() {
-    return this.getDefOrConfig("groupAdd")
-  }
-
-  /** 代理 */
-  get proxy() {
-    return this.getDefOrConfig("proxy")
-  }
-
-  /** pixiv */
-  get pixiv() {
-    return this.getDefOrConfig("pixiv")
-  }
-
-  /** 哔咔 */
-  get bika() {
-    return this.getDefOrConfig("bika")
-  }
-
-  /** 搜图 */
-  get picSearch() {
-    return this.getDefOrConfig("picSearch")
-  }
-
-  /** setu */
-  get setu() {
-    return this.getDefOrConfig("setu")
-  }
-
   /** 状态 */
   get state() {
     return this.getDefOrConfig("state")
   }
-
-  /** 群管 */
-  get groupAdmin() {
-    return this.getDefOrConfig("groupAdmin")
-  }
-
+  
   /**
    * 默认配置和用户配置
    * @param name
@@ -222,12 +167,6 @@ class Config {
       let index = yaml.jsonData[key].indexOf(value)
       yaml.delete(`${key}.${index}`)
     }
-  }
-
-  async change_pixiv() {
-    let pixiv = (await import("../model/index.js")).Pixiv
-    let PixivApi = (await import("../model/Pixiv/api.js")).default
-    pixiv.PixivClient = new PixivApi(this.pixiv.refresh_token)
   }
 }
 export default new Config()
