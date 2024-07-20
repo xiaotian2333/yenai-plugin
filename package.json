@@ -1,5 +1,5 @@
 {
-  "name": "yenai-plguin",
+  "name": "yenai-plugin",
   "version": "1.4.0",
   "description": "Yunzai-Bot插件扩展",
   "main": "index.js",
