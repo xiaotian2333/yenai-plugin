@@ -99,10 +99,9 @@ function parseConfig(psTestSites, psTestTimeout) {
  * 网络测试
  * @param {string} url 测试的url
  * @param {number} [timeoutTime] 超时时间
- * @param {boolean} useProxy 是否使用代理
  * @returns {string}
  */
-async function getNetworkLatency(url, timeoutTime = 5000, useProxy = false) {
+async function getNetworkLatency(url, timeoutTime = 5000) {
   let { controller, clearTimeout } = await createAbortCont(timeoutTime)
 
   try {
@@ -111,7 +110,6 @@ async function getNetworkLatency(url, timeoutTime = 5000, useProxy = false) {
       signal: controller.signal,
       origError: true,
       outErrorLog: false,
-      agent: !!useProxy
     })
     const endTime = Date.now()
     let delay = endTime - startTime
