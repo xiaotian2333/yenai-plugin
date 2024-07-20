@@ -1,5 +1,10 @@
 > 如果您觉得我们的项目有帮助，请给我们一个星星（Starred）！您的支持对我们非常重要，将激励我们不断改进和提供更好的内容。谢谢！🙏
 
+# 分支说明
+
+本库精简至只剩状态功能，其他功能已全部删去  
+并且无法与普通版同时安装（而且也没必要）
+
 <img src="resources/img/logo.gif" alt="看板娘" width = "200" align="right">
 
 <div align="left">
@@ -11,13 +16,12 @@
 <br><img src="https://count.getloli.com/get/@:yenai-plugin?theme=rule34" /><br>
 
 
-[![deploy_docs](https://github.com/yeyang52/yenai-plugin/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/yeyang52/yenai-plugin/actions/workflows/deploy-docs.yml)
 [![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=yenai-plugin-eta)](https://vercel.com/yeyang52/yenai-plugin)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fbae5073-1b4c-4c62-a818-6cc8e100d336/deploy-status)](https://app.netlify.com/sites/yenai-plugin/deploys)
 
 ![Nodejs](https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white) 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-eed718?style=flat&logo=javascript&logoColor=ffffff)
-[![license](https://img.shields.io/github/license/yeyang52/yenai-plugin.svg?style=flat&logo=gnu)](https://github.com/yeyang52/yenai-plugin/blob/master/LICENSE) 
+[![license](https://img.shields.io/github/license/yeyang52/yenai-plugin.svg?style=flat&logo=gnu)](https://github.com/xiaotian2333/yenai-plugin/blob/master/LICENSE) 
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
 [![YunzaiBot](https://img.shields.io/badge/Yunzai-V3.0.0-black?style=flat&logo=dependabot)](https://gitee.com/Le-niao/Yunzai-Bot) 
 
@@ -27,9 +31,9 @@
 
 [![Gitee star](https://gitee.com/yeyang52/yenai-plugin/badge/star.svg?theme=dark)](https://gitee.com/yeyang52/yenai-plugin/stargazers)
 [![Gitee fork](https://gitee.com/yeyang52/yenai-plugin/badge/fork.svg?theme=dark)](https://gitee.com/yeyang52/yenai-plugin/members)
-[![GitHub stars](https://img.shields.io/github/stars/yeyang52/yenai-plugin)](https://github.com/yeyang52/yenai-plugin/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/yeyang52/yenai-plugin)](https://github.com/yeyang52/yenai-plugin/network)
-[![GitHub issues](https://img.shields.io/github/issues/yeyang52/yenai-plugin)](https://github.com/yeyang52/yenai-plugin/issues)
+[![GitHub stars](https://img.shields.io/github/stars/yeyang52/yenai-plugin)](https://github.com/xiaotian2333/yenai-plugin/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yeyang52/yenai-plugin)](https://github.com/xiaotian2333/yenai-plugin/network)
+[![GitHub issues](https://img.shields.io/github/issues/yeyang52/yenai-plugin)](https://github.com/xiaotian2333/yenai-plugin/issues)
 </div>
 
 <div align="center">
@@ -48,171 +52,18 @@
 
 - 使用github
 ```sh
-git clone -b master --depth=1 https://github.com/yeyang52/yenai-plugin.git ./plugins/yenai-plugin
-```
-- 使用gitee
-```sh
-git clone -b master --depth=1 https://gitee.com/yeyang52/yenai-plugin.git ./plugins/yenai-plugin
+git clone -b master --depth=1 https://github.com/xiaotian2333/yenai-plugin.git ./plugins/yenai-plugin
 ```
 
 2. 安装依赖(可选：不安装依赖将无法使用一些功能)
 
 ```sh
-pnpm install
+pnpm install --filter=yenai-plugin
 ```
 
 ## 功能介绍 📖
 
 > Yenai-Plugin为您提供以下功能
->
-> Tip：以下只是简单描述功能具体指令请使用 **#椰奶帮助 #椰奶群管帮助 #椰奶设置**查看
-
-<details>
-  <summary>事件通知</summary>
-
-- [x] 撤回监听
-
-- [x] 好友申请
-
-- [x] 群邀请
-
-- [x] 好友|群 列表变动
-
-- [x] 好友|群 消息
-
-- [x] Bot被禁言
-
-Tip：具体可使用 **#椰奶设置** 查看
-  </details>
-
-<details>
-  <summary>助手功能</summary>
-
-- [x] 发送 群聊|好友 消息
-
-- [x] 改头像 | 改昵称 | 改状态 | 改昵称 | 改签名 | 改性别
-
-- [x] 删好友 | 退群
-
-- [x] 获取 好友|群 列表
-
-- [x] 增 删 查 说说
-
-- [x] 开启/关闭戳一戳
-
-- [x] 增 删 黑/白名单
-
-
-</details>
-<details>
-  <summary>事件处理</summary>
-
-- [x] 同意|拒绝 好友申请
-
-- [x] 同意|拒绝 群邀请
-
-- [x] 回复好友消息
-
-- [x] 查看现有好友申请/群邀请
-
-- [x] 同意/拒绝全部好友申请/群邀请
-
-- [x] 查看全部请求
-  
-- [ ] 查看/回添 单向好友
-  
-
-</details>
-<details>
-  <summary>娱乐功能</summary>
-
-- [x] 随机唱鸭
-
-- [x] 赞我（支持陌生人点赞）
-
-- [x] coser
-
-- [x] 支付宝到账语音
-
-</details>
-<details>
-  <summary>Pixiv功能</summary>
-
-- [x] Pixiv排行榜
-
-- [x] Tag搜图
-
-- [x] Pid搜图
-
-- [x] Uid搜图
-
-- [x] 查看热门Tag
-
-- [x] 查看相关作品
-
-Tip：详情请参考[此教程](https://docs.qq.com/doc/p/108e5d788607d988ac62e1512552c8bd2d870321)
-
-</details>
-
-<details>
-  <summary>群管功能</summary>
-
-- [x] (全体)?禁言|解禁
-
-- [x] 允许|禁止 匿名
-
-- [x] 踢@群员
-
-- [x] 设置|取消 管理
-
-- [x] 增 删 查 公告
-
-- [x] 我要自闭
-
-- [x] 申请头衔
-
-- [x] 修改头衔
-
-- [x] 头衔屏蔽词
-
-- [x] 查看/清理多久没发言的人
-
-- [x] 查看/清理从未发言的人
-
-- [x] 查看最近入群情况
-
-- [x] 获取禁言列表
-
-- [x] 解除全部禁言
-
-- [x] 加群申请处理
-
-- [x] 白名单
-
-- [ ] 黑名单
-
-- [x] 哪个叼毛是龙王
-  
-Tip：具体可使用 **#椰奶群管帮助** 查看
-  </details>
-
-<details>
-  <summary>搜图搜番</summary>
-
-- [x] [saucenao](https://saucenao.com)
-- [x] [whatanime](https://trace.moe)
-- [x] [ascii2d](https://ascii2d.net)
-
-</details>
-
-<details>
-  <summary>哔咔功能</summary>
-
-- [x] 哔咔搜索
-- [x] 哔咔看本子
-
-</details>
-
 
 <details>
   <summary>图片状态</summary>
@@ -225,8 +76,6 @@ Tip：具体可使用 **#椰奶群管帮助** 查看
 
 </details>
 <br>
-
-更多信息请移步[文档](https://yenai.trss.me)
 
 ## 特别鸣谢 ❤️
 
