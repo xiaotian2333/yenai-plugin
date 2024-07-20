@@ -29,8 +29,6 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yeyang52/yenai-plugin)
 ![Lines of code](https://img.shields.io/tokei/lines/github/yeyang52/yenai-plugin)
 
-[![Gitee star](https://gitee.com/yeyang52/yenai-plugin/badge/star.svg?theme=dark)](https://gitee.com/yeyang52/yenai-plugin/stargazers)
-[![Gitee fork](https://gitee.com/yeyang52/yenai-plugin/badge/fork.svg?theme=dark)](https://gitee.com/yeyang52/yenai-plugin/members)
 [![GitHub stars](https://img.shields.io/github/stars/yeyang52/yenai-plugin)](https://github.com/xiaotian2333/yenai-plugin/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/yeyang52/yenai-plugin)](https://github.com/xiaotian2333/yenai-plugin/network)
 [![GitHub issues](https://img.shields.io/github/issues/yeyang52/yenai-plugin)](https://github.com/xiaotian2333/yenai-plugin/issues)
